@@ -1,4 +1,4 @@
-#Loops allow you to automate repetitive tasks.
+#Loops allow you to automate repetitive tasks. (this is a test)
 #Read the directions in the exercises below and don't forget to print your results and commit and push your code after each exercise!
 
 #Now, go ahead and get loopy!
@@ -12,7 +12,8 @@
 # ...
 ##'Number 8, your order is ready.'
 
-
+for num in range(1,9):
+    print('Number ' + str(num) + ', your order is ready')
 #2 Now Serving
 #Create a while loop that will print the following message:
 #'Now serving number 1.'
@@ -21,6 +22,11 @@
 # ...
 # ...
 # 'Now serving number 5.'
+for order in range(1, 9):
+    print('Now serving number ' + str(order) + ('.'))
+
+
+
 
 
 #3 3 is a Magic Number
@@ -34,13 +40,36 @@
 # ...
 # 9 x 3 = 27
 
+#for number in range(1, 9):
+ #   print(str(number) * str(3) + ' =' + )
+
+
+#  I DID NOT UNDERSTAND THE BELOW
+# i = 0
+# while 1 < 10:
+#     i +=1
+#     print(str(i) + ' x ' + str(3) + ' = ' + str(i * 3))
+
+
+
+
 
 #4. Uber This!
 # Declare a variable named cars and assign it a list of 5 of your favorite car brands. Next create a for loop that will iterate through the cars list and prints the following: 'My next car will be a red x.' Where x represents each item in the list.
+cars = ['toyota', 'honda', 'lexus', 'Gogo', 'mercedes']
+for car in cars:
+    print('My next car will a red ' + car + '.')
+
 
 
 #5 Uber This Again
 #Print each item in the above cars list using a while loop.
+cars = ['toyota', 'honda', 'lexus', 'Gogo', 'mercedes']
+i = 0
+while i < len(cars):
+    print('My next car is a ' + cars[i])
+    i += 1
+
 
     
 #6  No More Tears
@@ -54,15 +83,32 @@
 
 cyber_attacks = ['Wannacry', 'Petya', 'Locky', 'Krack Attack', 'Sambacry']
 
+for attacks in cyber_attacks:
+    print('The attack at' + str(cyber_attacks.index(attacks) + ' is ' + attacks + ' .')
+
+
+
 
 #7 Even
 # Declare a variable named even_list and assign it an empty list. Next, write a for loop that will place 25 even numbers starting from 0 into the even_list list. Print the even_list variable to see your results. 
+
+even_list = []
+for number in range(0, 51):
+    if number%2 == 0:
+        even_list.append(number)
+print(even_list)
 
 
 #8 Sum Up
 # Create a function named add_up which takes a parameter num. In the code block inside the function, create a variable named sum and assign it a number value of 0. Next, create a for loop that will iterate through a list of numbers using the range function that will be determined by the num parameter and will sum up all the numbers in the list and store it to the sum variable. Print the sum variable to see your results.
 
 #i.e a number list of 10 will have a sum total of 45
+def add_up(num):
+    sum = 0
+    for number in range(num):
+        sum += number
+    print sum
+add_up(10)
 
 
 #9 East Coast vs West Coast - A Hip Hop Rivalry
@@ -72,14 +118,26 @@ cyber_attacks = ['Wannacry', 'Petya', 'Locky', 'Krack Attack', 'Sambacry']
 
 rappers = ['Tupac', 'Biggie', 'Ice Cube', 'Nas', 'Snoop', '50 Cent', 'Nate Dogg', 'Wu Tang Clan', 'Kendrick Lamar']
 
+def 
+
 #10 Breaking Up is Easy
 #Create a for loop that will iterate through 10 even numbers (starting from 0) and stop printing at 10.
+for number in range(0, 20, 2):
+    if number == 10:
+        break
+    print(number)
 
 
 #11 Zip Codes
 #Create a for loop that will iterate through the zip codes list below and print all the zip codes except for 96822.
 
 zip_codes = [90001,90002,90003,90004,90005,96822,90007,90008,90010,90011,90012,90013,90014,90015, 90016,90017,90018,90019]
+
+
+for code in zip_codes:
+    if code == 96822:
+        continue
+    print(code)
 
 
 #12 Fizz Buzz!
@@ -101,8 +159,27 @@ zip_codes = [90001,90002,90003,90004,90005,96822,90007,90008,90010,90011,90012,9
 # ...
 # 14
 # Fizz Buzz
-
+for num in range(1, 101):
+    if num % 5 == 0 and num % 3 == 0:
+        print('Fizz Buzz')
+    elif num % 3 == 0:
+        print('Fizz')
+    elif num % 5 == 0:
+        print('Buzz')
+    else:
+        print(str(num))
 
 #13 Fizz Buzz Again 
 #Do the same thing again using a while loop.
+count = 0
+while count < 101:
+    if count % 5 == 0 and count % 3 == 0:
+        print('Fizz Buzz')
+    elif count % 3 == 0:
+        print('Fizz')
+    elif count % 5 == 0:
+        print('Buzz')
+    else:
+        print(count)
+    count +=1
 
